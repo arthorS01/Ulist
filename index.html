@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="icofont/icofont/icofont.min.css" rel="stylesheet">
+    <link href="app/styles/style.css" rel="stylesheet">
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <title>U-List</title>
+</head>
+<body>
+
+
+    <div id="overall_page_loader">
+        <img src="./images/banner.gif">
+    </div>
+    <div id="status_board">
+        <p> </p>
+    </div>
+   
+    <main>
+ 
+        <section id="user_area">
+
+            <input type="hidden" value="0" id="current_screen">
+            <input type="hidden" value="rovers" id="current_subsection">
+            <input type="hidden" value="list" id="current_heading">
+           
+            <section id="list_view">
+                <section id="heading">
+                    <h1>List</h1>
+                </section>
+
+                <div class="section_selector">
+                    <button id="rovers_list" class="active"><i class="icofont-microphone"></i> <span>Rovers</span></button>
+                    <button id="cart_list"><i class="icofont-ebook"></i><span> Cart</span></button>
+                    <button id="add_list"><i class="icofont-ui-add"></i> <span>New</span></button>
+                </div>
+    
+                <div class="section_view">
+                    
+                    <div id="section_loader">
+                    </div>
+                    <!-- appropriate list would be showed here
+                    depended on the button that was clicked-rovers or cart -->
+                </div> 
+            </section>
+
+            <section id="names_view">
+                <section id="heading">
+                    <h1>Names</h1>
+                    <div id="tools">
+                        <div id="search_area_container"></button><input type="text" id="search_area" placeholder="Search for a name"> <button id='search_icon' class="search"><i class="icofont-search-1"></i></button></div>    
+                    </div>
+                </section>
+
+                <div class="section_selector">
+                    <button id="rovers_list_btn" class="active"><i class="icofont-microphone"></i><span>Rovers</span></button>
+                    <button id="cart_list_btn"><i class="icofont-ebook"></i><span>Cart</span></button>
+                    <button id="add_name"><i class="icofont-ui-add"></i> <span>New</span></button>
+                </div>
+    
+                <div class="section_view">
+                    
+                    <div id="section_loader">
+                    </div>
+                     <!-- appropriate names would be showed here
+                    depending on the button that was clicked-rovers or cart -->
+                </div> 
+            </section>
+               
+        </section>
+   
+    </main>
+    <section id="list_display_section">
+
+        <div id="list_display_tools">
+            <input type="hidden" value="0" id="list_save_status">
+            <button class="back_button"><i class="icofont-rounded-left"></i></button>
+            <button id="save_button" class="go_btn"><i class="icofont-save"></i> &nbsp; Save</button>
+        </div>
+        <div id="list_view">
+            
+        </div>
+
+    </section>
+    <section id="list_view_section">
+        <div id="list_view_tools">
+            <button class="back_button"><i class="icofont-rounded-left"></i></button>
+            <button id="print_btn" class="go_btn">Print</button>
+        </div>
+        <div id="list_view_section_display">
+            
+        </div>
+    </section>
+    <nav>
+        <button id="view_list_btn" class="active_btn" data-target="0" alt="list"><i class="icofont-list"></i></button>
+        <button type="button" data-target="1" id="view_names_btn" ><i class="icofont-ui-user"></i></button>  
+     </nav>
+
+</body>
+<script src="app/app.js" type="module"></script>
+</html>
